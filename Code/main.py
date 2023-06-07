@@ -1,8 +1,11 @@
 import pygame
+from pytmx.util_pygame import load_pygame
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
+tmx_data = load_pygame('../Assets/Starting-Location.tmx')
+print(dir(tmx_data.layers))
 running = True
 
 while running:
