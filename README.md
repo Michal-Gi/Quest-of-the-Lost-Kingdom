@@ -12,3 +12,8 @@ With its rich storytelling, immersive gameplay, and strategic combat mechanics, 
 As you explore the vast open world, be captivated by the stunning visuals and a mesmerizing soundtrack that brings the game to life. Dive into deep lore, encounter mythical creatures, and unravel the mysteries of the lost kingdom in this unforgettable adventure.
 
 Prepare to embark on a heroic journey as Aiden, and let "Quest of the Lost Kingdom" transport you to a realm of magic, danger, and untold wonders. Will you uncover the truth and bring salvation to the lost kingdom, or will darkness prevail? The fate of the realm rests in your hands.
+
+all art used in this project comes from following sources:
+
+assets for maps:
+https://opengameart.org/content/16x16-jrpg-tilesets-enlarged-2x
