@@ -1,5 +1,8 @@
 import pygame
+import player
+import sys
 from pytmx.util_pygame import load_pygame
+
 
 
 class Tile(pygame.sprite.Sprite):
@@ -13,14 +16,15 @@ screen = pygame.display.set_mode((768, 432), pygame.FULLSCREEN)
 clock = pygame.time.Clock()
 tmx_data = load_pygame('../Assets/Starting-Location.tmx')
 sprite_group = pygame.sprite.Group()
+visible_sprite = pygame.sprite.Group()
 for layer in tmx_data.layers:
-    if hasattr(layer,'data'):
+    if hasattr(layer, 'data'):
         for x,y,surf in layer.tiles():
             pos = (x * 16, y * 16)
             Tile(pos=pos, surf=surf, groups=sprite_group)
 print(tmx_data.layers)
 running = True
-
+gracz = player.Player(pos=(100,200), groups=visible_sprite, speed=5)
 
 
 while running:
@@ -35,6 +39,8 @@ while running:
 
     # RENDER YOUR GAME HERE
     sprite_group.draw(screen)
+    visible_sprite.draw(screen)
+    visible_sprite.update()
     # flip() the display to put your work on screen
     pygame.display.flip()
 
