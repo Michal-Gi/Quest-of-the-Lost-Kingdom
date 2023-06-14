@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
- <tileset firstgid="1" source="Assets/town_forest_tiles.tsx"/>
- <tileset firstgid="441" source="Assets/cave.tsx"/>
+ <tileset firstgid="1" source="town_forest_tiles.tsx"/>
+ <tileset firstgid="441" source="cave.tsx"/>
  <layer id="1" name="BackGround" width="48" height="48">
   <data encoding="csv">
 43,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,41,41,41,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,43,44,
