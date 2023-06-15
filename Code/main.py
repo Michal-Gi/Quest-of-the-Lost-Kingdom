@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import pygame, player, Map, basicenemy
->>>>>>> Moving_enemies_added
 import sys
 from pytmx.util_pygame import load_pygame
 
@@ -14,15 +11,12 @@ background_sprite_group = pygame.sprite.Group()
 character_sprite_group = pygame.sprite.Group()
 
 running = True
-<<<<<<< HEAD
 gracz = player.Player(pos=(100,200), groups=character_sprite_group, speed=5)
 current_level = Map.Map(tmx_data=background_tmx_data, background_sprite_group=background_sprite_group, character_sprite_group=character_sprite_group)
-=======
-enemy = basicenemy.BasicEnemy(pos=(100, 300), groups=visible_sprite, speed=1)
-enemy1 = basicenemy.BasicEnemy(pos=(100, 330), groups=visible_sprite, speed=1)
-enemy2 = basicenemy.BasicEnemy(pos=(100, 360), groups=visible_sprite, speed=1)
+enemy = basicenemy.BasicEnemy(pos=(100, 300), groups=character_sprite_group, speed=1)
+enemy1 = basicenemy.BasicEnemy(pos=(100, 330), groups=character_sprite_group, speed=1)
+enemy2 = basicenemy.BasicEnemy(pos=(100, 360), groups=character_sprite_group, speed=1)
 
->>>>>>> Moving_enemies_added
 
 
 while running:
@@ -36,12 +30,9 @@ while running:
     screen.fill("black")
 
     # RENDER YOUR GAME HERE
-<<<<<<< HEAD
     current_level.draw_map(screen=screen)
-=======
     for allenemies in basicenemy.BasicEnemy.enemy_list:
         allenemies.move_left_right()
->>>>>>> Moving_enemies_added
     # flip() the display to put your work on screen
     pygame.display.flip()
 
