@@ -1,0 +1,10 @@
+0.1.0 - finished character (full moveset and sprites)
+0.2.0 - finished monsters (full moveset and sprites)
+0.3.0 - finished character-monster interactions (damage)
+0.4.0 - equipment, collectibles and other items (picking up, using, dropping ?after death of monster or character?)
+0.5.0 - NPC (dialogs and quests)
+0.6.0 - other maps (going to different locations)
+0.7.0 - music
+0.8.0 - save and load system
+0.9.0 - character creation (optional)
+1.0.0 - auto generated documentation
