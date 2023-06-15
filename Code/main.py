@@ -1,5 +1,6 @@
 import pygame
 import player
+import basicenemy
 import sys
 from pytmx.util_pygame import load_pygame
 
@@ -25,6 +26,10 @@ for layer in tmx_data.layers:
 print(tmx_data.layers)
 running = True
 gracz = player.Player(pos=(100,200), groups=visible_sprite, speed=5)
+enemy = basicenemy.BasicEnemy(pos=(100, 300), groups=visible_sprite, speed=1)
+enemy1 = basicenemy.BasicEnemy(pos=(100, 330), groups=visible_sprite, speed=1)
+enemy2 = basicenemy.BasicEnemy(pos=(100, 360), groups=visible_sprite, speed=1)
+
 
 
 while running:
@@ -41,6 +46,9 @@ while running:
     sprite_group.draw(screen)
     visible_sprite.draw(screen)
     visible_sprite.update()
+
+    for allenemies in basicenemy.BasicEnemy.enemy_list:
+        allenemies.move_left_right()
     # flip() the display to put your work on screen
     pygame.display.flip()
 
