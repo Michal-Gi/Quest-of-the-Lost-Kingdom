@@ -5,6 +5,7 @@ class Map:
 
         self.background_sprite_group = background_sprite_group
         self.character_sprite_group = character_sprite_group
+
         for layer in tmx_data.layers:
             if hasattr(layer, 'data'):
                 for x, y, surf in layer.tiles():
