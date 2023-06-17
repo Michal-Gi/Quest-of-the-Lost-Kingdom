@@ -5,7 +5,12 @@ from os import path
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, groups, speed):
         super().__init__(groups)
-        self.image = pygame.image.load('../Assets/Characters/Player/idle1.png').convert_alpha()
+        self.back_frame = (0, 0, 64, 64)
+        self.left_frame = (0, 64, 64, 64)
+        self.front_frame = (0, 128, 64, 64)
+        self.right_frame = (0, 192, 64, 64)
+        self.current_frame = self.front_frame
+        self.load('../Assets/Characters/Player/idle1.png')
         self.rect = self.image.get_rect(topleft=pos)
 
         self.direction = pygame.math.Vector2()
@@ -13,10 +18,9 @@ class Player(pygame.sprite.Sprite):
         self.sprint = 1.0
 
 
-    def load(self):
-        spritesheet = SpriteSheet.SpriteSheet('../Assets/Characters/Player/idle1.png')
-
-        standing_front_frame = ()
+    def load(self, path):
+        spritesheet = SpriteSheet.SpriteSheet(path)
+        self.image = SpriteSheet.SpriteSheet.get_image(spritesheet, self.current_frame)
 
     def input(self):
         keys = pygame.key.get_pressed()
