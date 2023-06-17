@@ -17,3 +17,6 @@ all art used in this project comes from following sources:
 
 assets for maps:
 https://opengameart.org/content/16x16-jrpg-tilesets-enlarged-2x
+
+assets for player character:
+https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
