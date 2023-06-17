@@ -52,4 +52,14 @@ class Player(pygame.sprite.Sprite):
 
     def update(self):
         self.input()
+        if self.direction.x == 1:
+            self.current_frame = self.right_frame
+        elif self.direction.x == -1:
+            self.current_frame = self.left_frame
+        elif self.direction.y == -1:
+            self.current_frame = self.back_frame
+        else:
+            self.current_frame = self.front_frame
+
+        self.load(f'../Assets/Characters/Player/walk{1}.png')
         self.move(self.speed)
