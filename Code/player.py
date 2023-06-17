@@ -2,25 +2,29 @@ import pygame, SpriteSheet
 from os import path
 # from settings import *
 
+
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, groups, speed):
+    def __init__(self, pos, groups, speed, animation_speed, scale):
         super().__init__(groups)
+        self.scale = scale
+        self.elapsed_time = 0
+        self.animation_speed = animation_speed
         self.back_frame = (0, 0, 64, 64)
         self.left_frame = (0, 64, 64, 64)
         self.front_frame = (0, 128, 64, 64)
         self.right_frame = (0, 192, 64, 64)
         self.current_frame = self.front_frame
-        self.load('../Assets/Characters/Player/idle1.png')
+        self.load('../Assets/Characters/Player/idle1.png', scale)
         self.rect = self.image.get_rect(topleft=pos)
-
         self.direction = pygame.math.Vector2()
         self.speed = speed
         self.sprint = 1.0
 
 
-    def load(self, path):
+    def load(self, path, scale):
         spritesheet = SpriteSheet.SpriteSheet(path)
         self.image = SpriteSheet.SpriteSheet.get_image(spritesheet, self.current_frame)
+        self.image = pygame.transform.scale(self.image, (64*scale, 64*scale))
 
     def input(self):
         keys = pygame.key.get_pressed()
@@ -61,5 +65,7 @@ class Player(pygame.sprite.Sprite):
         else:
             self.current_frame = self.front_frame
 
-        self.load(f'../Assets/Characters/Player/walk{1}.png')
+        self.elapsed_time += self.animation_speed
+        frame = int(self.elapsed_time % 9)
+        self.load(f'../Assets/Characters/Player/walk{1 + frame}.png', scale=self.scale)
         self.move(self.speed)
