@@ -1,4 +1,5 @@
-import pygame, SpriteSheet
+import pygame
+from SpriteSheet import SpriteSheet
 from os import path
 # from settings import *
 
@@ -6,6 +7,8 @@ from os import path
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, groups, speed, animation_speed, scale):
         super().__init__(groups)
+        self.state_animation_frames = { 'idle' : 2, 'sword' : 6, 'bow' : 13, 'spear' : 8, 'fall' : 6}
+        self.current_state = 'idle'
         self.scale = scale
         self.elapsed_time = 0
         self.animation_speed = animation_speed
@@ -22,13 +25,14 @@ class Player(pygame.sprite.Sprite):
 
 
     def load(self, path, scale):
-        spritesheet = SpriteSheet.SpriteSheet(path)
-        self.image = SpriteSheet.SpriteSheet.get_image(spritesheet, self.current_frame)
+        spritesheet = SpriteSheet(path)
+        self.image = SpriteSheet.get_image(spritesheet, self.current_frame)
         self.image = pygame.transform.scale(self.image, (64*scale, 64*scale))
 
     def input(self):
         keys = pygame.key.get_pressed()
 
+        # movement
         if keys[pygame.K_w] or keys[pygame.K_UP]:
             self.direction.y = -1
         elif keys[pygame.K_s] or keys[pygame.K_DOWN]:
@@ -48,6 +52,14 @@ class Player(pygame.sprite.Sprite):
         else:
             self.sprint = 1.0
 
+        # animations
+        if keys[pygame.K_SPACE]:
+            self.current_state = 'spear'
+        else:
+            self.current_state = 'idle'
+
+
+
 
     def move(self, speed):
         if self.direction.magnitude() != 0:
@@ -66,6 +78,7 @@ class Player(pygame.sprite.Sprite):
             self.current_frame = self.front_frame
 
         self.elapsed_time += self.animation_speed
-        frame = int(self.elapsed_time % 9)
-        self.load(f'../Assets/Characters/Player/walk{1 + frame}.png', scale=self.scale)
+
+        frame = int(self.elapsed_time % self.state_animation_frames.get(self.current_state))
+        self.load(f'../Assets/Characters/Player/{self.current_state}{1 + frame}.png', scale=self.scale)
         self.move(self.speed)
