@@ -5,7 +5,7 @@ from os import path
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, groups, speed, animation_speed, scale):
+    def __init__(self, pos, groups, speed, animation_speed, scale, object_group):
         super().__init__(groups)
         # animations
         self.state_animation_frames = { 'idle': 2, 'sword': 6, 'bow': 13, 'spear': 8, 'fall': 6, 'walk': 9}
@@ -28,6 +28,7 @@ class Player(pygame.sprite.Sprite):
         self.direction = pygame.math.Vector2()
         self.speed = speed
         self.sprint = 1.0
+        self.object_surface = object_group
 
 
     def load(self, path, scale):
@@ -67,6 +68,9 @@ class Player(pygame.sprite.Sprite):
             self.action_time = pygame.time.get_ticks()
 
 
+    def collision(self):
+        if self.direction.x != 0:
+            pass
 
 
 
