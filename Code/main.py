@@ -12,7 +12,7 @@ character_sprite_group = pygame.sprite.Group()
 object_group = pygame.sprite.Group()
 
 running = True
-gracz = player.Player(pos=(100,200), groups=character_sprite_group, speed=2, animation_speed=0.2, scale=0.75, object_group=object_group)
+gracz = player.Player(pos=(400,300), groups=character_sprite_group, speed=2, animation_speed=0.2, scale=0.5, obstacles=object_group)
 current_level = Map.Map(tmx_data=background_tmx_data, background_sprite_group=background_sprite_group, character_sprite_group=character_sprite_group, object_group=object_group)
 enemy = basicenemy.BasicEnemy(pos=(100, 300), groups=character_sprite_group, speed=1)
 enemy1 = basicenemy.BasicEnemy(pos=(100, 330), groups=character_sprite_group, speed=1)

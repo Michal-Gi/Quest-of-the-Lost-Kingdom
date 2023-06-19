@@ -5,7 +5,7 @@ from os import path
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, groups, speed, animation_speed, scale, object_group):
+    def __init__(self, pos, groups, speed, animation_speed, scale, obstacles):
         super().__init__(groups)
         # animations
         self.state_animation_frames = { 'idle': 2, 'sword': 6, 'bow': 13, 'spear': 8, 'fall': 6, 'walk': 9}
@@ -28,7 +28,7 @@ class Player(pygame.sprite.Sprite):
         self.direction = pygame.math.Vector2()
         self.speed = speed
         self.sprint = 1.0
-        self.object_surface = object_group
+        self.obstacles = obstacles
 
 
     def load(self, path, scale):
@@ -68,16 +68,33 @@ class Player(pygame.sprite.Sprite):
             self.action_time = pygame.time.get_ticks()
 
 
-    def collision(self):
-        if self.direction.x != 0:
-            pass
+    def collision(self, direction):
+        if direction == 'horizontal':
+            for sprite in self.obstacles:
+                if pygame.sprite.collide_rect(self, sprite):
+                    if self.direction.x > 0:
+                        self.rect.right = sprite.rect.left
+                    if self.direction.x < 0:
+                        self.rect.left = sprite.rect.right
+
+        if direction == 'vertical':
+            for sprite in self.obstacles:
+                if pygame.sprite.collide_rect(self, sprite):
+                    if self.direction.y > 0:
+                        self.rect.bottom = sprite.rect.top
+                    if self.direction.y < 0:
+                        self.rect.top = sprite.rect.bottom
 
 
 
     def move(self, speed):
         if self.direction.magnitude() != 0:
             self.direction = self.direction.normalize()
-        self.rect.center += self.direction * speed * self.sprint
+
+        self.rect.centerx += self.direction.x * speed * self.sprint
+        self.collision('horizontal')
+        self.rect.centery += self.direction.y * speed * self.sprint
+        self.collision('vertical')
 
     def update(self):
         self.input()
@@ -103,6 +120,8 @@ class Player(pygame.sprite.Sprite):
         self.move(self.speed)
 
         self.cooldowns(self.current_state)
+
+        # print(self.rect.center)
 
     def cooldowns(self, action):
         current_time = pygame.time.get_ticks()
