@@ -1,36 +1,42 @@
-import pygame
+import pygame, SpriteSheet
 import time
+import random
 
-
-def calculate_distance(position1, position2):
-    return pygame.math.Vector2(position2) - pygame.math.Vector2(position1)
 
 
 class BasicEnemy(pygame.sprite.Sprite):
     enemy_list = []
 
-    def __init__(self, pos, groups, speed, chase_range):
+    def __init__(self, pos, groups, speed, chase_range, scale, animation_speed, player):
         super().__init__(groups)
-        #self.image = pygame.image.load('../Assets/Characters/Enemies/testenemy.png').convert_alpha()
+        self.scale = scale
+        self.current_state = 'idle'
+        self.elapsed_time = 0
+        self.animation_speed = animation_speed
+        self.back_frame = (0, 0, 64, 64)
+        self.left_frame = (0, 64, 64, 64)
+        self.front_frame = (0, 128, 64, 64)
+        self.right_frame = (0, 192, 64, 64)
+        self.current_frame = self.front_frame
         self.image = pygame.image.load('../Assets/Characters/Enemies/skeleton16bit.png').convert_alpha()
         self.rect = self.image.get_rect(topleft=pos)
-
         self.direction = pygame.math.Vector2()
         self.speed = speed
         self.sprint = 1.0
         self.timer = time.time()
         self.chase_range = chase_range
         self.focus = False
+        self.player = player
         BasicEnemy.enemy_list.append(self)
 
-    def set_focus(self, focus):
-        self.focus = focus
+    def load(self, path, scale):
+        spritesheet = SpriteSheet.SpriteSheet(path)
+        self.image = SpriteSheet.SpriteSheet.get_image(spritesheet, self.current_frame)
+        self.image = pygame.transform.scale(self.image, (64*scale, 64*scale))
 
-    def move_left_right(self):
-        self.rect.center += self.direction * self.speed
 
     def random_movement(self):
-        elapsed_time = time.time() - self.timer
+        elapsed_time = (time.time() - self.timer) % 2
 
         if elapsed_time < 0.5:
             self.direction = pygame.math.Vector2(-1, 0)
@@ -42,25 +48,41 @@ class BasicEnemy(pygame.sprite.Sprite):
             self.direction = pygame.math.Vector2(0, -1)
         else:
             self.timer = time.time()
-            self.direction.x = -1
 
+    def move(self, speed):
+        if self.direction.magnitude() != 0:
+            self.direction = self.direction.normalize()
+        self.rect.center += self.direction * speed * self.sprint
 
-    #def update(self):
-     #   self.move_left_right()
-      #  self.random_movement()
-       # if self.focus:
-        #    print("Enemy is focusing on the player.")
+    def chaseplayer(self, player):
+        player_pos = pygame.math.Vector2(player.rect.x, player.rect.y)
+        enemy_pos = pygame.math.Vector2(self.rect.x, self.rect.y)
 
-    def update(self, player_position):
-        self.move_left_right()
-        self.random_movement()
-
-        distance = calculate_distance(self.rect.center, player_position)
-        if distance <= self.chase_range:
-            self.set_focus(True)
+        distance = player_pos.distance_to(enemy_pos)
+        if distance < self.chase_range:
+            self.focus = True
         else:
-            self.set_focus(False)
+            self.focus = False
 
         if self.focus:
-            print("Enemy is focusing on the player.")
+            self.direction = player_pos - enemy_pos
+            if self.direction.length() > 0:
+                self.direction.normalize()
+        else:
+            self.random_movement()
 
+    def update(self):
+
+        if self.direction.x == 1:
+            self.current_frame = self.right_frame
+        elif self.direction.x == -1:
+            self.current_frame = self.left_frame
+        elif self.direction.y == -1:
+            self.current_frame = self.back_frame
+        else:
+            self.current_frame = self.front_frame
+
+        self.elapsed_time += self.animation_speed
+        frame = int(self.elapsed_time % 9)
+        self.load(f'../Assets/Characters/Enemies/skeleton_bow-{1 + frame}.png', scale=self.scale)
+        self.move(self.speed)
