@@ -24,6 +24,7 @@ class Player(pygame.sprite.Sprite):
         self.current_frame = self.front_frame
         self.load('../Assets/Characters/Player/idle1.png', scale)
         self.rect = self.image.get_rect(topleft=pos)
+        self.mask = pygame.mask.from_surface(self.image)
         # movement
         self.direction = pygame.math.Vector2()
         self.speed = speed
@@ -68,33 +69,59 @@ class Player(pygame.sprite.Sprite):
             self.action_time = pygame.time.get_ticks()
 
 
-    def collision(self, direction):
-        if direction == 'horizontal':
-            for sprite in self.obstacles:
-                if pygame.sprite.collide_rect(self, sprite):
-                    if self.direction.x > 0:
-                        self.rect.right = sprite.rect.left
-                    if self.direction.x < 0:
-                        self.rect.left = sprite.rect.right
-
-        if direction == 'vertical':
-            for sprite in self.obstacles:
-                if pygame.sprite.collide_rect(self, sprite):
+    def collision(self):
+        # horizontal movement
+        for sprite in self.obstacles:
+            if pygame.sprite.spritecollide(self, [sprite], False, pygame.sprite.collide_mask):
+                if self.direction.x > 0 > self.rect.centerx - sprite.rect.centerx:
                     if self.direction.y > 0:
-                        self.rect.bottom = sprite.rect.top
-                    if self.direction.y < 0:
-                        self.rect.top = sprite.rect.bottom
-
-
+                        for sprite2 in self.obstacles:
+                            if sprite2.rect.collidepoint(self.rect.midbottom):
+                                self.direction.y = 0
+                    elif self.direction.y < 0:
+                        for sprite2 in self.obstacles:
+                            if sprite2.rect.collidepoint(self.rect.midtop):
+                                self.direction.y = 0
+                    self.direction.x = 0
+                elif self.direction.x < 0 < self.rect.centerx - sprite.rect.centerx:
+                    if self.direction.y > 0:
+                        for sprite2 in self.obstacles:
+                            if sprite2.rect.collidepoint(self.rect.midbottom):
+                                self.direction.y = 0
+                    elif self.direction.y < 0:
+                        for sprite2 in self.obstacles:
+                            if sprite2.rect.collidepoint(self.rect.midtop):
+                                self.direction.y = 0
+                    self.direction.x = 0
+                else:
+                    if self.direction.y > 0 > self.rect.centery - sprite.rect.centery:
+                        if self.direction.x > 0 > self.rect.centerx - sprite.rect.centerx:
+                            for sprite2 in self.obstacles:
+                                if sprite2.rect.collidepoint(self.rect.midright):
+                                    self.direction.x = 0
+                        elif self.direction.x < 0 < self.rect.centerx - sprite.rect.centerx:
+                            for sprite2 in self.obstacles:
+                                if sprite2.rect.collidepoint(self.rect.midleft):
+                                    self.direction.x = 0
+                        self.direction.y = 0
+                    elif self.direction.y < 0 < self.rect.centery - sprite.rect.centery:
+                        if self.direction.x > 0 > self.rect.centerx - sprite.rect.centerx:
+                            for sprite2 in self.obstacles:
+                                if sprite2.rect.collidepoint(self.rect.midright):
+                                    self.direction.x = 0
+                        elif self.direction.x < 0 < self.rect.centerx - sprite.rect.centerx:
+                            for sprite2 in self.obstacles:
+                                if sprite2.rect.collidepoint(self.rect.midleft):
+                                    self.direction.x = 0
+                        self.direction.y = 0
 
     def move(self, speed):
         if self.direction.magnitude() != 0:
             self.direction = self.direction.normalize()
 
+        self.collision()
         self.rect.centerx += self.direction.x * speed * self.sprint
-        self.collision('horizontal')
         self.rect.centery += self.direction.y * speed * self.sprint
-        self.collision('vertical')
 
     def update(self):
         self.input()
