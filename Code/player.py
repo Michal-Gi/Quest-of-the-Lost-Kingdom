@@ -1,12 +1,15 @@
 import pygame
 from SpriteSheet import SpriteSheet
+from Character import Character
+from item import item
 from os import path
 # from settings import *
 
 
-class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, groups, speed, animation_speed, scale, obstacles):
-        super().__init__(groups)
+class Player(Character, pygame.sprite.Sprite):
+    def __init__(self, pos, groups, speed, animation_speed, scale, obstacles, enemies, hp, mp, stamina, damage, avatar):
+        Character.__init__(self, hp=hp, mp=mp, stamina=stamina, damage=damage)
+        pygame.sprite.Sprite.__init__(self, groups)
         # animations
         self.state_animation_frames = { 'idle': 2, 'sword': 6, 'bow': 13, 'spear': 8, 'fall': 6, 'walk': 9}
         self.current_state = 'idle'
@@ -30,6 +33,11 @@ class Player(pygame.sprite.Sprite):
         self.speed = speed
         self.sprint = 1.0
         self.obstacles = obstacles
+        self.enemies = enemies
+        self.avatar = avatar
+        self.maxhp = hp
+        self.coininventory = []
+        self.potioninventory = []
 
 
     def load(self, path, scale):
@@ -115,6 +123,44 @@ class Player(pygame.sprite.Sprite):
                                     self.direction.x = 0
                         self.direction.y = 0
 
+
+        for sprite in self.enemies:
+            if pygame.sprite.spritecollide(self, [sprite], False, pygame.sprite.collide_mask):
+                if self.current_state == 'walk' or self.current_state == 'idle':
+                    self.get_hurt(sprite.damage)
+                    if self.hp <= 0:
+                        self.current_state = 'fall'
+                        sprite.get_hurt(10000)
+            if self.rect.colliderect(sprite) and self.current_state == 'spear':
+                sprite.get_hurt(self.damage)
+                print(sprite.hp)
+
+
+    def draw_hp_bar(self, surface, x, y):
+        if self.hp < 0:
+            self.hp = 0
+        bar_length = 100
+        bar_height = 20
+        pct = self.hp / self.maxhp
+        fill = pct * bar_length
+        outline_rect = pygame.Rect(x, y, bar_length, bar_height)
+        fill_rect = pygame.Rect(x, y, fill, bar_height)
+        pygame.draw.rect(surface, (255, 0, 0), fill_rect)
+        pygame.draw.rect(surface, (255, 255, 255), outline_rect, 2)
+
+    def draw_coininventory(self, surface, x, y):
+        font = pygame.font.Font(None, 24)
+        text = font.render(f'Coins collected: {len(self.coininventory)}', True, (255, 255, 255))
+        surface.blit(text, (x, y))
+
+    def draw_potioninventory(self, surface, x, y):
+        font = pygame.font.Font(None, 24)
+        text = font.render(f'Potions collected: {len(self.potioninventory)}', True, (255, 255, 255))
+        surface.blit(text, (x, y))
+
+
+
+
     def move(self, speed):
         if self.direction.magnitude() != 0:
             self.direction = self.direction.normalize()
@@ -135,19 +181,26 @@ class Player(pygame.sprite.Sprite):
         elif self.direction.y == 1:
             self.current_frame = self.front_frame
 
-        if (self.direction.x != 0 or self.direction.y != 0) and not self.in_action:
-            self.current_state = 'walk'
-        elif self.direction.x == 0 and self.direction.y == 0 and not self.in_action:
-            self.current_state = 'idle'
+        if self.current_state == 'fall':
+            self.current_frame = self.back_frame
+
+        if self.current_state != 'fall':
+            if (self.direction.x != 0 or self.direction.y != 0) and not self.in_action:
+                self.current_state = 'walk'
+            elif self.direction.x == 0 and self.direction.y == 0 and not self.in_action:
+                self.current_state = 'idle'
 
         self.elapsed_time += self.animation_speed
 
         frame = int(self.elapsed_time % self.state_animation_frames.get(self.current_state))
-        self.load(f'../Assets/Characters/Player/{self.current_state}{1 + frame}.png', scale=self.scale)
-        self.move(self.speed)
+        self.load(f'../Assets/Characters/Player/{self.avatar}{self.current_state}{1 + frame}.png', scale=self.scale)
+        if self.current_state != 'fall':
+            self.move(self.speed)
 
         self.cooldowns(self.current_state)
 
+
+        self.immunity_time = max(self.immunity_time - 1, 0)
         # print(self.rect.center)
 
     def cooldowns(self, action):

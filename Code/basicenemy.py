@@ -1,14 +1,16 @@
 import pygame, SpriteSheet
 import time
+from Character import Character
 import random
 
 
 
-class BasicEnemy(pygame.sprite.Sprite):
+class BasicEnemy(pygame.sprite.Sprite, Character):
     enemy_list = []
 
-    def __init__(self, pos, groups, speed, chase_range, scale, animation_speed, player):
-        super().__init__(groups)
+    def __init__(self, pos, groups, speed, chase_range, scale, animation_speed, player, obstacles, charactersprite, hp, mp, stamina, damage):
+        Character.__init__(self, hp=hp, mp=mp, stamina=stamina, damage=damage)
+        pygame.sprite.Sprite.__init__(self, groups)
         self.scale = scale
         self.current_state = 'idle'
         self.elapsed_time = 0
@@ -27,6 +29,9 @@ class BasicEnemy(pygame.sprite.Sprite):
         self.chase_range = chase_range
         self.focus = False
         self.player = player
+        self.obstacles = obstacles
+        self.charactersprite = charactersprite
+        self.hp = hp
         BasicEnemy.enemy_list.append(self)
 
     def load(self, path, scale):
@@ -52,6 +57,8 @@ class BasicEnemy(pygame.sprite.Sprite):
     def move(self, speed):
         if self.direction.magnitude() != 0:
             self.direction = self.direction.normalize()
+
+        self.collision()
         self.rect.center += self.direction * speed * self.sprint
 
     def chaseplayer(self, player):
@@ -71,6 +78,56 @@ class BasicEnemy(pygame.sprite.Sprite):
         else:
             self.random_movement()
 
+    def collision(self):
+        # horizontal movement
+        for sprite in self.obstacles:
+            if pygame.sprite.spritecollide(self, [sprite], False, pygame.sprite.collide_mask):
+                if self.direction.x > 0 > self.rect.centerx - sprite.rect.centerx:
+                    if self.direction.y > 0:
+                        for sprite2 in self.obstacles:
+                            if sprite2.rect.collidepoint(self.rect.midbottom):
+                                self.direction.y = 0
+                    elif self.direction.y < 0:
+                        for sprite2 in self.obstacles:
+                            if sprite2.rect.collidepoint(self.rect.midtop):
+                                self.direction.y = 0
+                    self.direction.x = 0
+                elif self.direction.x < 0 < self.rect.centerx - sprite.rect.centerx:
+                    if self.direction.y > 0:
+                        for sprite2 in self.obstacles:
+                            if sprite2.rect.collidepoint(self.rect.midbottom):
+                                self.direction.y = 0
+                    elif self.direction.y < 0:
+                        for sprite2 in self.obstacles:
+                            if sprite2.rect.collidepoint(self.rect.midtop):
+                                self.direction.y = 0
+                    self.direction.x = 0
+                else:
+                    if self.direction.y > 0 > self.rect.centery - sprite.rect.centery:
+                        if self.direction.x > 0 > self.rect.centerx - sprite.rect.centerx:
+                            for sprite2 in self.obstacles:
+                                if sprite2.rect.collidepoint(self.rect.midright):
+                                    self.direction.x = 0
+                        elif self.direction.x < 0 < self.rect.centerx - sprite.rect.centerx:
+                            for sprite2 in self.obstacles:
+                                if sprite2.rect.collidepoint(self.rect.midleft):
+                                    self.direction.x = 0
+                        self.direction.y = 0
+                    elif self.direction.y < 0 < self.rect.centery - sprite.rect.centery:
+                        if self.direction.x > 0 > self.rect.centerx - sprite.rect.centerx:
+                            for sprite2 in self.obstacles:
+                                if sprite2.rect.collidepoint(self.rect.midright):
+                                    self.direction.x = 0
+                        elif self.direction.x < 0 < self.rect.centerx - sprite.rect.centerx:
+                            for sprite2 in self.obstacles:
+                                if sprite2.rect.collidepoint(self.rect.midleft):
+                                    self.direction.x = 0
+                        self.direction.y = 0
+
+
+
+
+
     def update(self):
 
         if self.direction.x == 1:
@@ -82,7 +139,11 @@ class BasicEnemy(pygame.sprite.Sprite):
         else:
             self.current_frame = self.front_frame
 
+
         self.elapsed_time += self.animation_speed
+        self.immunity_time = max(self.immunity_time - 1, 0)
+        if self.hp <= 0:
+            self.kill()
         frame = int(self.elapsed_time % 9)
         self.load(f'../Assets/Characters/Enemies/skeleton_bow-{1 + frame}.png', scale=self.scale)
         self.move(self.speed)
