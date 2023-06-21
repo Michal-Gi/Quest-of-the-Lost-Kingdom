@@ -33,7 +33,10 @@ class item(pygame.sprite.Sprite):
             self.collected = True
             if self.name == 'coin':
                 player.coininventory.append(self)
+                player.speed += 1
             if self.name == 'potion':
                 player.potioninventory.append(self)
+                if player.hp != player.maxhp:
+                    player.hp += 20
             self.kill()
 

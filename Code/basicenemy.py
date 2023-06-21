@@ -12,7 +12,7 @@ class BasicEnemy(pygame.sprite.Sprite, Character):
         Character.__init__(self, hp=hp, mp=mp, stamina=stamina, damage=damage)
         pygame.sprite.Sprite.__init__(self, groups)
         self.scale = scale
-        self.current_state = 'idle'
+        #self.current_state = 'idle'
         self.elapsed_time = 0
         self.animation_speed = animation_speed
         self.back_frame = (0, 0, 64, 64)

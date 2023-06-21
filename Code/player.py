@@ -38,6 +38,7 @@ class Player(Character, pygame.sprite.Sprite):
         self.maxhp = hp
         self.coininventory = []
         self.potioninventory = []
+        self.fontpath = '../Font/PressStart2P.ttf'
 
 
     def load(self, path, scale):
@@ -149,12 +150,12 @@ class Player(Character, pygame.sprite.Sprite):
         pygame.draw.rect(surface, (255, 255, 255), outline_rect, 2)
 
     def draw_coininventory(self, surface, x, y):
-        font = pygame.font.Font(None, 24)
+        font = pygame.font.Font(self.fontpath, 12)
         text = font.render(f'Coins collected: {len(self.coininventory)}', True, (255, 255, 255))
         surface.blit(text, (x, y))
 
     def draw_potioninventory(self, surface, x, y):
-        font = pygame.font.Font(None, 24)
+        font = pygame.font.Font(self.fontpath, 12)
         text = font.render(f'Potions collected: {len(self.potioninventory)}', True, (255, 255, 255))
         surface.blit(text, (x, y))
 

@@ -39,7 +39,12 @@ enemy1 = BasicEnemy(pos=(200, 350), groups=enemy_sprite_group, speed=1, chase_ra
 enemy2 = BasicEnemy(pos=(200, 200), groups=enemy_sprite_group, speed=1, chase_range=80, scale=0.75, animation_speed=0.2, player=gracz, obstacles=object_group, charactersprite=character_sprite_group, hp=100, mp=10, stamina=10, damage=20)
 
 item1 = item(groups=item_sprite_group, name='coin')
-item2 = item(groups=item_sprite_group, name='potion')
+item2 = item(groups=item_sprite_group, name='coin')
+item3 = item(groups=item_sprite_group, name='coin')
+item4 = item(groups=item_sprite_group, name='potion')
+item5 = item(groups=item_sprite_group, name='potion')
+item6 = item(groups=item_sprite_group, name='potion')
+
 
 pygame.mixer.music.play(-1)
 while running:
@@ -56,8 +61,8 @@ while running:
     current_level.draw_map(screen=screen)
     hp_pct = gracz.hp / 100
     gracz.draw_hp_bar(screen, 20, 20)
-    gracz.draw_coininventory(screen, 150, 20)
-    gracz.draw_potioninventory(screen, 150, 40)
+    gracz.draw_coininventory(screen, 150, 10)
+    gracz.draw_potioninventory(screen, 150, 35)
     for allenemies in BasicEnemy.enemy_list:
         allenemies.update()
         allenemies.chaseplayer(gracz)
