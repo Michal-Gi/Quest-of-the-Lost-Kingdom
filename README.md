@@ -20,3 +20,12 @@ https://opengameart.org/content/16x16-jrpg-tilesets-enlarged-2x
 
 assets for player character:
 https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+music:
+https://opengameart.org/content/casual-game-track
+
+assets for coins:
+https://bloodstainedritualofthenight.wiki.fextralife.com/16-bit+Coin
+
+assets for potions:
+https://opengameart.org/content/16-bit-rpg-potion-pack

@@ -3,6 +3,22 @@ from PIL import ImageTk, Image
 
 
 class ImageSelector:
+    """
+        Klasa ImageSelector umożliwia użytkownikowi wybór obrazu za pomocą interfejsu graficznego.
+
+        Atrybuty:
+            master (Tk): Główne okno aplikacji Tkinter.
+            avatar (str): Wybrany avatar gracza.
+            image1 (ImageTk.PhotoImage): Obrazek dostępny do wyboru.
+            image2 (ImageTk.PhotoImage): Drugi obrazek dostępny do wyboru.
+            label1 (Label): Etykieta zawierająca pierwszy obrazek.
+            label2 (Label): Etykieta zawierająca drugi obrazek.
+
+        Metody:
+            __init__(self, master): Inicjalizuje obiekt ImageSelector, ładuje obrazki i wyświetla je w etykietach.
+            select_image1(self, event): Wybiera pierwszy obrazek jako avatar gracza, wyświetla komunikat i zamyka okno.
+            select_image2(self, event): Wybiera drugi obrazek jako avatar gracza, wyświetla komunikat i zamyka okno.
+        """
     def __init__(self, master):
         self.master = master
         self.avatar = ''

@@ -1,0 +1,408 @@
+
+  <!DOCTYPE html>
+<html lang="PL" class="scroll-smooth">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  
+  <title>Code.player | Quest-of-the-lost-Kingdom 1.0.0 - dokumentacja</title>
+  <link rel="stylesheet" href="../../_static/pygments.css" />
+  <link rel="stylesheet" href="../../_static/theme.c973b470ab69573097f3.css" />
+  <link rel="search" title="Szukaj" href="../../search.html" />
+  <link rel="index" title="Indeks" href="../../genindex.html" />
+</head>
+
+<body class="antialiased text-gray">
+    <div id="page" data-controller="sidebar search scroll "
+      data-action="keydown@window->search#focus "
+      class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
+    >
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#code-player" title="Skip navigation links">Skip to content</a>
+
+    <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
+      <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+    <button data-action="sidebar#open" data-sidebar-target="hamburger"
+  class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand">
+  <span class="sr-only">Open navigation menu</span>
+  <svg aria-hidden="true" class="inline fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+  </svg>
+</button><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none" href="../../index.html"
+  title="Back to homepage"><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">Quest-of-the-lost-Kingdom 1.0.0 - dokumentacja</span>
+</a></div><div class="flex justify-end items-center flex-1"><form
+  id="searchbox"
+  action="../../search.html"
+  data-action="click->search#focusSearchInput"
+  method="get"
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10">
+
+  <button
+    class="text-inherit h-14 w-14"
+    aria-label="Get search results"
+    tabindex="-1"
+  >
+    <svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </button>
+
+  <input
+    name="q"
+    id="search-input"
+    data-search-target="searchInput"
+    type="search"
+    aria-label="Search the docs"
+    placeholder="Search the docs"
+    class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100"
+  />
+</form></div>
+</div>
+    </header>
+
+    
+<aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed pt-14 xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+  <nav
+  role="navigation"
+  class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
+>
+  <div class="nav-toc flex-1 pl-6"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">Quest-of-the-Lost-Kingdom</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Code.html">Code package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.Character">Code.Character module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.ImageSelector">Code.ImageSelector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.Map">Code.Map module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.SpriteSheet">Code.SpriteSheet module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.Tile">Code.Tile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.basicenemy">Code.basicenemy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.item">Code.item module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.main">Code.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code.player">Code.player module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Code.html#module-Code">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+  <button
+      data-action="sidebar#close"
+      title="Close navigation menu"
+      class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center">
+    <span class="sr-only">Close navigation menu</span>
+    <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+</nav>
+</aside>
+
+<main
+  class="px-4 pt-14 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col flex-1 h-full mx-0 md:mx-auto xl:mr-0"
+><nav role="navigation"
+     aria-label="breadcrumbs"
+     class="print:hidden mt-12 text-sm text-gray-light">
+  <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../../index.html">Quest-of-the-lost-Kingdom 1.0.0 - dokumentacja</a>
+  <span class="mr-1">/</span><a class="text-gray-light text-sm hover:text-gray-dark" href="../index.html">Kod modułu</a>
+    <span class="mr-1">/</span><span aria-current="page">Code.player</span>
+</nav>
+
+  <article role="main" class="flex-1 prose">
+    
+  <h1>Kod źródłowy modułu Code.player</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pygame</span>
+<span class="kn">from</span> <span class="nn">SpriteSheet</span> <span class="kn">import</span> <span class="n">SpriteSheet</span>
+<span class="kn">from</span> <span class="nn">Character</span> <span class="kn">import</span> <span class="n">Character</span>
+<span class="kn">from</span> <span class="nn">item</span> <span class="kn">import</span> <span class="n">item</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="c1"># from settings import *</span>
+
+
+<div class="viewcode-block" id="Player"><a class="viewcode-back" href="../../Code.html#Code.player.Player">[dokumentacja]</a><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Character</span><span class="p">,</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Klasa Player służy do reprezentowania gracza w grze. Jest to postać sterowana przez gracza, która ma określone atrybuty</span>
+<span class="sd">        i wykonuje określone działania, takie jak poruszanie się, atakowanie i zbieranie przedmiotów.</span>
+
+<span class="sd">        Atrybuty:</span>
+<span class="sd">            hp (int): Obecne punkty życia gracza.</span>
+<span class="sd">            mp (int): Obecne punkty magii gracza.</span>
+<span class="sd">            stamina (int): Obecna wytrzymałość gracza.</span>
+<span class="sd">            damage (int): Obecne obrażenia zadawane przez gracza.</span>
+<span class="sd">            speed (float): Szybkość poruszania się gracza.</span>
+<span class="sd">            animation_speed (int): Szybkość animacji gracza.</span>
+<span class="sd">            scale (int): Skala sprite&#39;a gracza.</span>
+<span class="sd">            obstacles (pygame.sprite.Group): Grupa sprite&#39;ów reprezentujących przeszkody.</span>
+<span class="sd">            enemies (pygame.sprite.Group): Grupa sprite&#39;ów reprezentujących wrogów.</span>
+<span class="sd">            avatar (str): Ścieżka do pliku z avatarem gracza.</span>
+<span class="sd">            maxhp (int): Maksymalna liczba punktów życia gracza.</span>
+<span class="sd">            coininventory (list): Lista zebranych przez gracza monet.</span>
+<span class="sd">            potioninventory (list): Lista zebranych przez gracza mikstur.</span>
+<span class="sd">            fontpath (str): Ścieżka do pliku z czcionką.</span>
+
+<span class="sd">        Metody:</span>
+<span class="sd">            __init__(self, pos, groups, speed, animation_speed, scale, obstacles, enemies, hp, mp, stamina, damage, avatar):</span>
+<span class="sd">                Inicjalizuje obiekt Player na podstawie podanych atrybutów i dodaje go do odpowiednich grup sprite&#39;ów.</span>
+
+<span class="sd">            load(self, path, scale):</span>
+<span class="sd">                Ładuje sprite&#39;a gracza z pliku i skaluje go do odpowiedniego rozmiaru.</span>
+
+<span class="sd">            input(self):</span>
+<span class="sd">                Przetwarza wejście od gracza i odpowiednio aktualizuje stan gracza.</span>
+
+<span class="sd">            collision(self):</span>
+<span class="sd">                Sprawdza kolizje gracza z innymi sprite&#39;ami i odpowiednio aktualizuje stan gracza.</span>
+
+<span class="sd">            draw_hp_bar(self, surface, x, y):</span>
+<span class="sd">                Rysuje pasek życia gracza na podanej powierzchni w określonym miejscu.</span>
+
+<span class="sd">            draw_coininventory(self, surface, x, y):</span>
+<span class="sd">                Rysuje liczbę zebranych przez gracza monet na podanej powierzchni w określonym miejscu.</span>
+
+<span class="sd">            draw_potioninventory(self, surface, x, y):</span>
+<span class="sd">                Rysuje liczbę zebranych przez gracza mikstur na podanej powierzchni w określonym miejscu.</span>
+
+<span class="sd">            move(self, speed):</span>
+<span class="sd">                Porusza graczem z odpowiednią szybkością.</span>
+
+<span class="sd">            update(self):</span>
+<span class="sd">                Aktualizuje stan gracza na podstawie wejścia od gracza i zdarzeń w grze.</span>
+
+<span class="sd">            cooldowns(self, action):</span>
+<span class="sd">                Obsługuje czas odnowienia dla akcji gracza.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">animation_speed</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">enemies</span><span class="p">,</span> <span class="n">hp</span><span class="p">,</span> <span class="n">mp</span><span class="p">,</span> <span class="n">stamina</span><span class="p">,</span> <span class="n">damage</span><span class="p">,</span> <span class="n">avatar</span><span class="p">):</span>
+        <span class="n">Character</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hp</span><span class="o">=</span><span class="n">hp</span><span class="p">,</span> <span class="n">mp</span><span class="o">=</span><span class="n">mp</span><span class="p">,</span> <span class="n">stamina</span><span class="o">=</span><span class="n">stamina</span><span class="p">,</span> <span class="n">damage</span><span class="o">=</span><span class="n">damage</span><span class="p">)</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">groups</span><span class="p">)</span>
+        <span class="c1"># animations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state_animation_frames</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;idle&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;sword&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;bow&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s1">&#39;spear&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;fall&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;walk&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">=</span> <span class="s1">&#39;idle&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">animation_speed</span> <span class="o">=</span> <span class="n">animation_speed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_action</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_cooldown_times</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;idle&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;sword&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;bow&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s1">&#39;spear&#39;</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span> <span class="s1">&#39;fall&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># rendering</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">back_frame</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left_frame</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">front_frame</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_frame</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">front_frame</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;../Assets/Characters/Player/idle1.png&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">topleft</span><span class="o">=</span><span class="n">pos</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">from_surface</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+        <span class="c1"># movement</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">Vector2</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sprint</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span> <span class="o">=</span> <span class="n">obstacles</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enemies</span> <span class="o">=</span> <span class="n">enemies</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avatar</span> <span class="o">=</span> <span class="n">avatar</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxhp</span> <span class="o">=</span> <span class="n">hp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coininventory</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">potioninventory</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fontpath</span> <span class="o">=</span> <span class="s1">&#39;../Font/PressStart2P.ttf&#39;</span>
+
+
+<div class="viewcode-block" id="Player.load"><a class="viewcode-back" href="../../Code.html#Code.player.Player.load">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+        <span class="n">spritesheet</span> <span class="o">=</span> <span class="n">SpriteSheet</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">SpriteSheet</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">spritesheet</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="mi">64</span><span class="o">*</span><span class="n">scale</span><span class="p">,</span> <span class="mi">64</span><span class="o">*</span><span class="n">scale</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Player.input"><a class="viewcode-back" href="../../Code.html#Code.player.Player.input">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">get_pressed</span><span class="p">()</span>
+
+        <span class="c1"># movement</span>
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_w</span><span class="p">]</span> <span class="ow">or</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_UP</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_s</span><span class="p">]</span> <span class="ow">or</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_DOWN</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_a</span><span class="p">]</span> <span class="ow">or</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_d</span><span class="p">]</span> <span class="ow">or</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_RIGHT</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># run</span>
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_LSHIFT</span><span class="p">]</span> <span class="ow">or</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_RSHIFT</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sprint</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sprint</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+        <span class="c1"># attack</span>
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_SPACE</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_action</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">=</span> <span class="s1">&#39;spear&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">in_action</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">action_time</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">get_ticks</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Player.collision"><a class="viewcode-back" href="../../Code.html#Code.player.Player.collision">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">collision</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># horizontal movement</span>
+        <span class="k">for</span> <span class="n">sprite</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">spritecollide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">[</span><span class="n">sprite</span><span class="p">],</span> <span class="kc">False</span><span class="p">,</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">collide_mask</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span> <span class="o">-</span> <span class="n">sprite</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">sprite2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">sprite2</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">midbottom</span><span class="p">):</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">sprite2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">sprite2</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">midtop</span><span class="p">):</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span> <span class="o">-</span> <span class="n">sprite</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">sprite2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">sprite2</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">midbottom</span><span class="p">):</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">sprite2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">sprite2</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">midtop</span><span class="p">):</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centery</span> <span class="o">-</span> <span class="n">sprite</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centery</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span> <span class="o">-</span> <span class="n">sprite</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">sprite2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+                                <span class="k">if</span> <span class="n">sprite2</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">midright</span><span class="p">):</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+                        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span> <span class="o">-</span> <span class="n">sprite</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">sprite2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+                                <span class="k">if</span> <span class="n">sprite2</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">midleft</span><span class="p">):</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centery</span> <span class="o">-</span> <span class="n">sprite</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centery</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span> <span class="o">-</span> <span class="n">sprite</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">sprite2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+                                <span class="k">if</span> <span class="n">sprite2</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">midright</span><span class="p">):</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+                        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span> <span class="o">-</span> <span class="n">sprite</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">sprite2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span><span class="p">:</span>
+                                <span class="k">if</span> <span class="n">sprite2</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">midleft</span><span class="p">):</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+        <span class="k">for</span> <span class="n">sprite</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">enemies</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">spritecollide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">[</span><span class="n">sprite</span><span class="p">],</span> <span class="kc">False</span><span class="p">,</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">collide_mask</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">==</span> <span class="s1">&#39;walk&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">==</span> <span class="s1">&#39;idle&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_hurt</span><span class="p">(</span><span class="n">sprite</span><span class="o">.</span><span class="n">damage</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hp</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">=</span> <span class="s1">&#39;fall&#39;</span>
+                        <span class="n">sprite</span><span class="o">.</span><span class="n">get_hurt</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">==</span> <span class="s1">&#39;spear&#39;</span><span class="p">:</span>
+                <span class="n">sprite</span><span class="o">.</span><span class="n">get_hurt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">damage</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">sprite</span><span class="o">.</span><span class="n">hp</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Player.draw_hp_bar"><a class="viewcode-back" href="../../Code.html#Code.player.Player.draw_hp_bar">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">draw_hp_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hp</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="n">bar_height</span> <span class="o">=</span> <span class="mi">20</span>
+        <span class="n">pct</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hp</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxhp</span>
+        <span class="n">fill</span> <span class="o">=</span> <span class="n">pct</span> <span class="o">*</span> <span class="n">bar_length</span>
+        <span class="n">outline_rect</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bar_length</span><span class="p">,</span> <span class="n">bar_height</span><span class="p">)</span>
+        <span class="n">fill_rect</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">fill</span><span class="p">,</span> <span class="n">bar_height</span><span class="p">)</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">fill_rect</span><span class="p">)</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">outline_rect</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Player.draw_coininventory"><a class="viewcode-back" href="../../Code.html#Code.player.Player.draw_coininventory">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">draw_coininventory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fontpath</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Coins collected: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coininventory</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+        <span class="n">surface</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Player.draw_potioninventory"><a class="viewcode-back" href="../../Code.html#Code.player.Player.draw_potioninventory">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">draw_potioninventory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fontpath</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Potions collected: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">potioninventory</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+        <span class="n">surface</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span></div>
+
+
+
+
+<div class="viewcode-block" id="Player.move"><a class="viewcode-back" href="../../Code.html#Code.player.Player.move">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">magnitude</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">collision</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centerx</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">speed</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">sprint</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">centery</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">speed</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">sprint</span></div>
+
+<div class="viewcode-block" id="Player.update"><a class="viewcode-back" href="../../Code.html#Code.player.Player.update">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input</span><span class="p">()</span>
+        <span class="c1"># character rotation</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_frame</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">left_frame</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">back_frame</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">front_frame</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">==</span> <span class="s1">&#39;fall&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">back_frame</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">!=</span> <span class="s1">&#39;fall&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_action</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">=</span> <span class="s1">&#39;walk&#39;</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_action</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">=</span> <span class="s1">&#39;idle&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">animation_speed</span>
+
+        <span class="n">frame</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_animation_frames</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_state</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;../Assets/Characters/Player/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">avatar</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">current_state</span><span class="si">}{</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frame</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">!=</span> <span class="s1">&#39;fall&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">cooldowns</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_state</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">immunity_time</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">immunity_time</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
+        <span class="c1"># print(self.rect.center)</span>
+
+<div class="viewcode-block" id="Player.cooldowns"><a class="viewcode-back" href="../../Code.html#Code.player.Player.cooldowns">[dokumentacja]</a>    <span class="k">def</span> <span class="nf">cooldowns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="n">current_time</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">get_ticks</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_action</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">current_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">action_time</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">action_cooldown_times</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">action</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">in_action</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">current_state</span> <span class="o">=</span> <span class="s1">&#39;idle&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span> <span class="o">=</span> <span class="mi">0</span></div></div>
+</pre></div>
+
+  </article>
+
+  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Maks Debek, Michal Gierczuk&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 7.0.1</a></div>
+  </footer></main>
+
+
+    <button
+  data-search-target="snackbar"
+  data-action="search#hideSnackbar"
+  class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full"
+>
+  Clear highlights
+</button><div
+  data-sidebar-target="screen"
+  data-action="click->sidebar#close"
+  class="fixed hidden inset-0 bg-black bg-opacity-50">
+</div>
+  </div>
+  
+  
+<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+<script src="../../_static/doctools.js"></script>
+<script src="../../_static/sphinx_highlight.js"></script>
+<script src="../../_static/translations.js"></script>
+<script src="../../_static/theme.c8991bd7bb6e57cbeea8.js"></script>
+  
+</body>
+
+</html>

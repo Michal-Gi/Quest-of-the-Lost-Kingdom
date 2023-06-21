@@ -6,6 +6,34 @@ import random
 
 
 class BasicEnemy(pygame.sprite.Sprite, Character):
+    """
+        Klasa BasicEnemy reprezentuje podstawowego wroga w grze. Klasa ta rozszerza klasy pygame.sprite.Sprite i Character.
+        Wrogowie mają określone atrybuty, takie jak pozycja, grupa, prędkość, zasięg ścigania, skala, szybkość animacji,
+        a także atrybuty dziedziczone z klasy Character.
+
+        Atrybuty Klasy:
+            enemy_list: Lista, która przechowuje wszystkie instancje wrogów stworzone z tej klasy.
+
+        Atrybuty:
+            pos (tuple): Początkowa pozycja wroga w przestrzeni 2D.
+            groups (pygame.sprite.Group): Grupa, do której należy sprite.
+            speed (float): Prędkość wroga.
+            chase_range (int): Zasięg, w którym wróg zacznie ścigać gracza.
+            scale (int): Skala wielkości wroga.
+            animation_speed (int): Szybkość animacji wroga.
+            player (object): Obiekt reprezentujący gracza.
+            obstacles (pygame.sprite.Group): Grupa zawierająca przeszkody.
+            charactersprite (str): Ścieżka do obrazka reprezentującego wroga.
+            hp, mp, stamina, damage (int): Atrybuty dziedziczone z klasy Character.
+
+        Metody:
+            load(self, path, scale): Wczytuje sprite z podanej ścieżki i skaluje go.
+            random_movement(self): Ustala losowy kierunek ruchu wroga.
+            move(self, speed): Porusza wrogiem z określoną prędkością, z uwzględnieniem kolizji.
+            chaseplayer(self, player): Wrog ściga gracza, jeśli ten znajduje się w zasięgu ścigania.
+            collision(self): Sprawdza kolizje z przeszkodami i zatrzymuje wroga, jeśli takie wystąpią.
+            update(self): Aktualizuje stan wroga - ładowanie odpowiedniego sprite'a, ruch, sprawdzanie czy wróg jest nadal "żywy".
+        """
     enemy_list = []
 
     def __init__(self, pos, groups, speed, chase_range, scale, animation_speed, player, obstacles, charactersprite, hp, mp, stamina, damage):

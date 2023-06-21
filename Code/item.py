@@ -1,6 +1,28 @@
 import pygame, SpriteSheet, random
 
 class item(pygame.sprite.Sprite):
+    """
+        Klasa item reprezentuje poszczególne przedmioty w grze. Klasa ta rozszerza klasę pygame.sprite.Sprite
+        i jest używana do inicjowania, umieszczania, skalowania i kontrolowania różnych typów przedmiotów
+        w grze. Każda instancja przedmiotu śledzi swój własny stan i właściwości.
+
+        Atrybuty Klasy:
+            item_list: Lista, która przechowuje wszystkie instancje przedmiotów stworzone z tej klasy.
+
+        Atrybuty:
+            groups (pygame.sprite.Group): Grupa, do której należy sprite.
+            name (str): Nazwa przedmiotu.
+            pos (tuple): Opcjonalnie; początkowa pozycja przedmiotu w przestrzeni 2D. Jeśli nie jest podana,
+                         przypisywana jest losowa pozycja.
+            image (pygame.Surface): Powierzchnia reprezentująca obraz przedmiotu.
+            rect (pygame.Rect): Obiekt z atrybutami szerokość, wysokość, x, y dla przedmiotu.
+            direction (pygame.math.Vector2): Kierunek przedmiotu.
+            collected (bool): Czy przedmiot został zebrany.
+
+        Metody:
+            checkifcollected(self, player): Metoda sprawdza, czy przedmiot został zebrany przez gracza.
+                                            Jeśli tak, następuje zmiana stanu przedmiotu oraz właściwości gracza.
+        """
     item_list = []
 
     def __init__(self, groups, name, pos=None):

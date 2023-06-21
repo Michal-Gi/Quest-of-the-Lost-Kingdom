@@ -1,0 +1,514 @@
+
+  <!DOCTYPE html>
+<html lang="PL" class="scroll-smooth">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Code package | Quest-of-the-lost-Kingdom 1.0.0 - dokumentacja</title>
+  <link rel="stylesheet" href="_static/pygments.css" />
+  <link rel="stylesheet" href="_static/theme.c973b470ab69573097f3.css" />
+  <link rel="search" title="Szukaj" href="search.html" />
+  <link rel="index" title="Indeks" href="genindex.html" />
+  <link rel="prev" title="Quest-of-the-Lost-Kingdom" href="modules.html" />
+</head>
+
+<body class="antialiased text-gray">
+    <div id="page" data-controller="sidebar search scroll "
+      data-action="keydown@window->search#focus "
+      class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
+    >
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#code-package" title="Skip navigation links">Skip to content</a>
+
+    <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
+      <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+    <button data-action="sidebar#open" data-sidebar-target="hamburger"
+  class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand">
+  <span class="sr-only">Open navigation menu</span>
+  <svg aria-hidden="true" class="inline fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+  </svg>
+</button><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none" href="index.html"
+  title="Back to homepage"><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">Quest-of-the-lost-Kingdom 1.0.0 - dokumentacja</span>
+</a></div><div class="flex justify-end items-center flex-1"><form
+  id="searchbox"
+  action="search.html"
+  data-action="click->search#focusSearchInput"
+  method="get"
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10">
+
+  <button
+    class="text-inherit h-14 w-14"
+    aria-label="Get search results"
+    tabindex="-1"
+  >
+    <svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </button>
+
+  <input
+    name="q"
+    id="search-input"
+    data-search-target="searchInput"
+    type="search"
+    aria-label="Search the docs"
+    placeholder="Search the docs"
+    class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100"
+  />
+</form></div>
+</div>
+    </header>
+
+    
+<aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed pt-14 xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+  <nav
+  role="navigation"
+  class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
+>
+  <div class="nav-toc flex-1 pl-6"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Quest-of-the-Lost-Kingdom</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Code package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.Character">Code.Character module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.ImageSelector">Code.ImageSelector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.Map">Code.Map module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.SpriteSheet">Code.SpriteSheet module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.Tile">Code.Tile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.basicenemy">Code.basicenemy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.item">Code.item module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.main">Code.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code.player">Code.player module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Code">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+  <button
+      data-action="sidebar#close"
+      title="Close navigation menu"
+      class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center">
+    <span class="sr-only">Close navigation menu</span>
+    <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+</nav>
+</aside>
+
+<main
+  class="px-4 pt-14 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col flex-1 h-full mx-0 md:mx-auto xl:mr-0"
+><nav role="navigation"
+     aria-label="breadcrumbs"
+     class="print:hidden mt-12 text-sm text-gray-light">
+  <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="index.html">Quest-of-the-lost-Kingdom 1.0.0 - dokumentacja</a>
+  <span class="mr-1">/</span><a class="text-gray-light text-sm hover:text-gray-dark" href="modules.html">Quest-of-the-Lost-Kingdom</a>
+    <span class="mr-1">/</span><span aria-current="page">Code package</span>
+</nav>
+
+  <article role="main" class="flex-1 prose">
+    
+  <section id="code-package">
+<h1>Code package<a class="headerlink" href="#code-package" title="Permalink to this heading"><span>#</span></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"><span>#</span></a></h2>
+</section>
+<section id="module-Code.Character">
+<span id="code-character-module"></span><h2>Code.Character module<a class="headerlink" href="#module-Code.Character" title="Permalink to this heading"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Code.Character.Character">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Code.Character.</span></span><span class="sig-name descname"><span class="pre">Character</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stamina</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damage</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/Character.html#Character"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.Character.Character" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Klasa Character reprezentuje postać w grze. Postać posiada określone atrybuty, takie jak punkty zdrowia (hp),
+punkty many (mp), wytrzymałość (stamina) oraz zadawane obrażenia (damage). Postać posiada również atrybut
+«immunity_time», który reprezentuje czas odporności na obrażenia.</p>
+<dl class="simple">
+<dt>Atrybuty:</dt><dd><p>hp (int): Punkty zdrowia postaci.
+mp (int): Punkty many postaci.
+stamina (int): Wytrzymałość postaci.
+damage (int): Obrażenia zadawane przez postać.
+immunity_time (int): Czas odporności na obrażenia.</p>
+</dd>
+<dt>Metody:</dt><dd><dl class="simple">
+<dt>get_hurt(self, damage): Metoda odpowiadająca za otrzymanie obrażeń przez postać.</dt><dd><p>Obrażenia są zadawane tylko, gdy «immunity_time» wynosi 0,
+w przeciwnym razie postać jest odporna na obrażenia.
+Po otrzymaniu obrażeń, «immunity_time» jest ustawiane na 60.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.Character.Character.get_hurt">
+<span class="sig-name descname"><span class="pre">get_hurt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damage</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/Character.html#Character.get_hurt"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.Character.Character.get_hurt" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Code.ImageSelector">
+<span id="code-imageselector-module"></span><h2>Code.ImageSelector module<a class="headerlink" href="#module-Code.ImageSelector" title="Permalink to this heading"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Code.ImageSelector.ImageSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Code.ImageSelector.</span></span><span class="sig-name descname"><span class="pre">ImageSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/ImageSelector.html#ImageSelector"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.ImageSelector.ImageSelector" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Klasa ImageSelector umożliwia użytkownikowi wybór obrazu za pomocą interfejsu graficznego.</p>
+<dl class="simple">
+<dt>Atrybuty:</dt><dd><p>master (Tk): Główne okno aplikacji Tkinter.
+avatar (str): Wybrany avatar gracza.
+image1 (ImageTk.PhotoImage): Obrazek dostępny do wyboru.
+image2 (ImageTk.PhotoImage): Drugi obrazek dostępny do wyboru.
+label1 (Label): Etykieta zawierająca pierwszy obrazek.
+label2 (Label): Etykieta zawierająca drugi obrazek.</p>
+</dd>
+<dt>Metody:</dt><dd><p>__init__(self, master): Inicjalizuje obiekt ImageSelector, ładuje obrazki i wyświetla je w etykietach.
+select_image1(self, event): Wybiera pierwszy obrazek jako avatar gracza, wyświetla komunikat i zamyka okno.
+select_image2(self, event): Wybiera drugi obrazek jako avatar gracza, wyświetla komunikat i zamyka okno.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.ImageSelector.ImageSelector.select_image1">
+<span class="sig-name descname"><span class="pre">select_image1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/ImageSelector.html#ImageSelector.select_image1"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.ImageSelector.ImageSelector.select_image1" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.ImageSelector.ImageSelector.select_image2">
+<span class="sig-name descname"><span class="pre">select_image2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/ImageSelector.html#ImageSelector.select_image2"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.ImageSelector.ImageSelector.select_image2" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Code.Map">
+<span id="code-map-module"></span><h2>Code.Map module<a class="headerlink" href="#module-Code.Map" title="Permalink to this heading"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Code.Map.Map">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Code.Map.</span></span><span class="sig-name descname"><span class="pre">Map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tmx_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_sprite_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">character_sprite_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enemy_sprite_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_sprite_group</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/Map.html#Map"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.Map.Map" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Klasa Map służy do reprezentowania mapy w grze. Mapa jest generowana na podstawie danych tmx (Tile Map XML).
+Klasa ta obsługuje różne grupy sprite’ów (tła, postaci, obiektów, przeciwników, przedmiotów) oraz gracza.</p>
+<dl class="simple">
+<dt>Atrybuty:</dt><dd><p>background_sprite_group (pygame.sprite.Group): Grupa sprite’ów reprezentujących tło mapy.
+character_sprite_group (pygame.sprite.Group): Grupa sprite’ów reprezentujących postacie na mapie.
+object_sprite_group (pygame.sprite.Group): Grupa sprite’ów reprezentujących obiekty na mapie.
+enemy_sprite_group (pygame.sprite.Group): Grupa sprite’ów reprezentujących przeciwników na mapie.
+player (object): Obiekt reprezentujący gracza.
+item_sprite_group (pygame.sprite.Group): Grupa sprite’ów reprezentujących przedmioty na mapie.</p>
+</dd>
+<dt>Metody:</dt><dd><dl class="simple">
+<dt>__init__(self, tmx_data, background_sprite_group, character_sprite_group, object_group, enemy_sprite_group, player, item_sprite_group):</dt><dd><p>Inicjalizuje obiekt Map na podstawie danych tmx oraz grup sprite’ów. Tworzy kafelki (Tiles) na podstawie tych danych.</p>
+</dd>
+<dt>draw_map(self, screen):</dt><dd><p>Rysuje mapę na ekranie. Rysuje wszystkie grupy sprite’ów oraz aktualizuje ich stan.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.Map.Map.draw_map">
+<span class="sig-name descname"><span class="pre">draw_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/Map.html#Map.draw_map"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.Map.Map.draw_map" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Code.SpriteSheet">
+<span id="code-spritesheet-module"></span><h2>Code.SpriteSheet module<a class="headerlink" href="#module-Code.SpriteSheet" title="Permalink to this heading"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Code.SpriteSheet.SpriteSheet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Code.SpriteSheet.</span></span><span class="sig-name descname"><span class="pre">SpriteSheet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/SpriteSheet.html#SpriteSheet"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.SpriteSheet.SpriteSheet" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Klasa SpriteSheet służy do obsługi arkusza sprite’ów (obrazka zawierającego wiele mniejszych obrazków,
+zazwyczaj stanowiących klatki animacji).</p>
+<dl class="simple">
+<dt>Atrybuty:</dt><dd><p>spritesheet (Surface): Powierzchnia zawierająca obraz arkusza sprite’ów.</p>
+</dd>
+<dt>Metody:</dt><dd><p>__init__(self, filename): Inicjalizuje obiekt SpriteSheet, wczytując obraz arkusza sprite’ów z pliku.
+get_image(self, frame): Zwraca konkretny sprite (obrazek) z arkusza na podstawie podanej ramki.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.SpriteSheet.SpriteSheet.get_image">
+<span class="sig-name descname"><span class="pre">get_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/SpriteSheet.html#SpriteSheet.get_image"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.SpriteSheet.SpriteSheet.get_image" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Code.Tile">
+<span id="code-tile-module"></span><h2>Code.Tile module<a class="headerlink" href="#module-Code.Tile" title="Permalink to this heading"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Code.Tile.Tile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Code.Tile.</span></span><span class="sig-name descname"><span class="pre">Tile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/Tile.html#Tile"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.Tile.Tile" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code></p>
+<p>Klasa Tile reprezentuje pojedynczy element (kafel, płytka) w grze, dziedzicząc po klasie Sprite z modułu pygame.</p>
+<dl class="simple">
+<dt>Atrybuty:</dt><dd><p>image (Surface): Powierzchnia reprezentująca obraz kafelka.
+rect (Rect): Prostokątny obszar pokrywający obraz.
+mask (Mask): Obiekt maski używany do precyzyjnej detekcji kolizji.</p>
+</dd>
+<dt>Metody:</dt><dd><p>__init__(self, pos, surf, groups): Inicjalizuje obiekt Tile, ustawia jego obraz, obszar i maskę.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-Code.basicenemy">
+<span id="code-basicenemy-module"></span><h2>Code.basicenemy module<a class="headerlink" href="#module-Code.basicenemy" title="Permalink to this heading"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Code.basicenemy.BasicEnemy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Code.basicenemy.</span></span><span class="sig-name descname"><span class="pre">BasicEnemy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chase_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">animation_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obstacles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charactersprite</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stamina</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damage</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/basicenemy.html#BasicEnemy"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.basicenemy.BasicEnemy" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Character</span></code></p>
+<p>Klasa BasicEnemy reprezentuje podstawowego wroga w grze. Klasa ta rozszerza klasy pygame.sprite.Sprite i Character.
+Wrogowie mają określone atrybuty, takie jak pozycja, grupa, prędkość, zasięg ścigania, skala, szybkość animacji,
+a także atrybuty dziedziczone z klasy Character.</p>
+<dl class="simple">
+<dt>Atrybuty Klasy:</dt><dd><p>enemy_list: Lista, która przechowuje wszystkie instancje wrogów stworzone z tej klasy.</p>
+</dd>
+<dt>Atrybuty:</dt><dd><p>pos (tuple): Początkowa pozycja wroga w przestrzeni 2D.
+groups (pygame.sprite.Group): Grupa, do której należy sprite.
+speed (float): Prędkość wroga.
+chase_range (int): Zasięg, w którym wróg zacznie ścigać gracza.
+scale (int): Skala wielkości wroga.
+animation_speed (int): Szybkość animacji wroga.
+player (object): Obiekt reprezentujący gracza.
+obstacles (pygame.sprite.Group): Grupa zawierająca przeszkody.
+charactersprite (str): Ścieżka do obrazka reprezentującego wroga.
+hp, mp, stamina, damage (int): Atrybuty dziedziczone z klasy Character.</p>
+</dd>
+<dt>Metody:</dt><dd><p>load(self, path, scale): Wczytuje sprite z podanej ścieżki i skaluje go.
+random_movement(self): Ustala losowy kierunek ruchu wroga.
+move(self, speed): Porusza wrogiem z określoną prędkością, z uwzględnieniem kolizji.
+chaseplayer(self, player): Wrog ściga gracza, jeśli ten znajduje się w zasięgu ścigania.
+collision(self): Sprawdza kolizje z przeszkodami i zatrzymuje wroga, jeśli takie wystąpią.
+update(self): Aktualizuje stan wroga - ładowanie odpowiedniego sprite’a, ruch, sprawdzanie czy wróg jest nadal „żywy”.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.basicenemy.BasicEnemy.chaseplayer">
+<span class="sig-name descname"><span class="pre">chaseplayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/basicenemy.html#BasicEnemy.chaseplayer"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.basicenemy.BasicEnemy.chaseplayer" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.basicenemy.BasicEnemy.collision">
+<span class="sig-name descname"><span class="pre">collision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/basicenemy.html#BasicEnemy.collision"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.basicenemy.BasicEnemy.collision" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Code.basicenemy.BasicEnemy.enemy_list">
+<span class="sig-name descname"><span class="pre">enemy_list</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#Code.basicenemy.BasicEnemy.enemy_list" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.basicenemy.BasicEnemy.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/basicenemy.html#BasicEnemy.load"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.basicenemy.BasicEnemy.load" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.basicenemy.BasicEnemy.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/basicenemy.html#BasicEnemy.move"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.basicenemy.BasicEnemy.move" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.basicenemy.BasicEnemy.random_movement">
+<span class="sig-name descname"><span class="pre">random_movement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/basicenemy.html#BasicEnemy.random_movement"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.basicenemy.BasicEnemy.random_movement" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.basicenemy.BasicEnemy.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/basicenemy.html#BasicEnemy.update"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.basicenemy.BasicEnemy.update" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>method to control sprite behavior</p>
+<p>Sprite.update(<a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs):</p>
+<p>The default implementation of this method does nothing; it’s just a
+convenient „hook” that you can override. This method is called by
+Group.update() with whatever arguments you give it.</p>
+<p>There is no need to use this method if not using the convenience
+method by the same name in the Group class.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Code.item">
+<span id="code-item-module"></span><h2>Code.item module<a class="headerlink" href="#module-Code.item" title="Permalink to this heading"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Code.item.item">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Code.item.</span></span><span class="sig-name descname"><span class="pre">item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/item.html#item"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.item.item" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code></p>
+<p>Klasa item reprezentuje poszczególne przedmioty w grze. Klasa ta rozszerza klasę pygame.sprite.Sprite
+i jest używana do inicjowania, umieszczania, skalowania i kontrolowania różnych typów przedmiotów
+w grze. Każda instancja przedmiotu śledzi swój własny stan i właściwości.</p>
+<dl>
+<dt>Atrybuty Klasy:</dt><dd><p>item_list: Lista, która przechowuje wszystkie instancje przedmiotów stworzone z tej klasy.</p>
+</dd>
+<dt>Atrybuty:</dt><dd><p>groups (pygame.sprite.Group): Grupa, do której należy sprite.
+name (str): Nazwa przedmiotu.
+pos (tuple): Opcjonalnie; początkowa pozycja przedmiotu w przestrzeni 2D. Jeśli nie jest podana,</p>
+<blockquote>
+<div><p>przypisywana jest losowa pozycja.</p>
+</div></blockquote>
+<p>image (pygame.Surface): Powierzchnia reprezentująca obraz przedmiotu.
+rect (pygame.Rect): Obiekt z atrybutami szerokość, wysokość, x, y dla przedmiotu.
+direction (pygame.math.Vector2): Kierunek przedmiotu.
+collected (bool): Czy przedmiot został zebrany.</p>
+</dd>
+<dt>Metody:</dt><dd><dl class="simple">
+<dt>checkifcollected(self, player): Metoda sprawdza, czy przedmiot został zebrany przez gracza.</dt><dd><p>Jeśli tak, następuje zmiana stanu przedmiotu oraz właściwości gracza.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.item.item.checkifcollected">
+<span class="sig-name descname"><span class="pre">checkifcollected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/item.html#item.checkifcollected"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.item.item.checkifcollected" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Code.item.item.item_list">
+<span class="sig-name descname"><span class="pre">item_list</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#Code.item.item.item_list" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Code.main">
+<span id="code-main-module"></span><h2>Code.main module<a class="headerlink" href="#module-Code.main" title="Permalink to this heading"><span>#</span></a></h2>
+</section>
+<section id="module-Code.player">
+<span id="code-player-module"></span><h2>Code.player module<a class="headerlink" href="#module-Code.player" title="Permalink to this heading"><span>#</span></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Code.player.Player">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Code.player.</span></span><span class="sig-name descname"><span class="pre">Player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">animation_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obstacles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enemies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stamina</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">Character</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code></p>
+<p>Klasa Player służy do reprezentowania gracza w grze. Jest to postać sterowana przez gracza, która ma określone atrybuty
+i wykonuje określone działania, takie jak poruszanie się, atakowanie i zbieranie przedmiotów.</p>
+<dl class="simple">
+<dt>Atrybuty:</dt><dd><p>hp (int): Obecne punkty życia gracza.
+mp (int): Obecne punkty magii gracza.
+stamina (int): Obecna wytrzymałość gracza.
+damage (int): Obecne obrażenia zadawane przez gracza.
+speed (float): Szybkość poruszania się gracza.
+animation_speed (int): Szybkość animacji gracza.
+scale (int): Skala sprite’a gracza.
+obstacles (pygame.sprite.Group): Grupa sprite’ów reprezentujących przeszkody.
+enemies (pygame.sprite.Group): Grupa sprite’ów reprezentujących wrogów.
+avatar (str): Ścieżka do pliku z avatarem gracza.
+maxhp (int): Maksymalna liczba punktów życia gracza.
+coininventory (list): Lista zebranych przez gracza monet.
+potioninventory (list): Lista zebranych przez gracza mikstur.
+fontpath (str): Ścieżka do pliku z czcionką.</p>
+</dd>
+<dt>Metody:</dt><dd><dl class="simple">
+<dt>__init__(self, pos, groups, speed, animation_speed, scale, obstacles, enemies, hp, mp, stamina, damage, avatar):</dt><dd><p>Inicjalizuje obiekt Player na podstawie podanych atrybutów i dodaje go do odpowiednich grup sprite’ów.</p>
+</dd>
+<dt>load(self, path, scale):</dt><dd><p>Ładuje sprite’a gracza z pliku i skaluje go do odpowiedniego rozmiaru.</p>
+</dd>
+<dt>input(self):</dt><dd><p>Przetwarza wejście od gracza i odpowiednio aktualizuje stan gracza.</p>
+</dd>
+<dt>collision(self):</dt><dd><p>Sprawdza kolizje gracza z innymi sprite’ami i odpowiednio aktualizuje stan gracza.</p>
+</dd>
+<dt>draw_hp_bar(self, surface, x, y):</dt><dd><p>Rysuje pasek życia gracza na podanej powierzchni w określonym miejscu.</p>
+</dd>
+<dt>draw_coininventory(self, surface, x, y):</dt><dd><p>Rysuje liczbę zebranych przez gracza monet na podanej powierzchni w określonym miejscu.</p>
+</dd>
+<dt>draw_potioninventory(self, surface, x, y):</dt><dd><p>Rysuje liczbę zebranych przez gracza mikstur na podanej powierzchni w określonym miejscu.</p>
+</dd>
+<dt>move(self, speed):</dt><dd><p>Porusza graczem z odpowiednią szybkością.</p>
+</dd>
+<dt>update(self):</dt><dd><p>Aktualizuje stan gracza na podstawie wejścia od gracza i zdarzeń w grze.</p>
+</dd>
+<dt>cooldowns(self, action):</dt><dd><p>Obsługuje czas odnowienia dla akcji gracza.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.collision">
+<span class="sig-name descname"><span class="pre">collision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.collision"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.collision" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.cooldowns">
+<span class="sig-name descname"><span class="pre">cooldowns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.cooldowns"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.cooldowns" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.draw_coininventory">
+<span class="sig-name descname"><span class="pre">draw_coininventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.draw_coininventory"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.draw_coininventory" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.draw_hp_bar">
+<span class="sig-name descname"><span class="pre">draw_hp_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.draw_hp_bar"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.draw_hp_bar" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.draw_potioninventory">
+<span class="sig-name descname"><span class="pre">draw_potioninventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.draw_potioninventory"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.draw_potioninventory" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.input">
+<span class="sig-name descname"><span class="pre">input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.input"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.input" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.load"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.load" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.move"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.move" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Code.player.Player.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Code/player.html#Player.update"><span class="viewcode-link"><span class="pre">[źródło]</span></span></a><a class="headerlink" href="#Code.player.Player.update" title="Stały odnośnik do tej definicji"><span>#</span></a></dt>
+<dd><p>method to control sprite behavior</p>
+<p>Sprite.update(<a href="#id5"><span class="problematic" id="id6">*</span></a>args, <a href="#id7"><span class="problematic" id="id8">**</span></a>kwargs):</p>
+<p>The default implementation of this method does nothing; it’s just a
+convenient „hook” that you can override. This method is called by
+Group.update() with whatever arguments you give it.</p>
+<p>There is no need to use this method if not using the convenience
+method by the same name in the Group class.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-Code">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Code" title="Permalink to this heading"><span>#</span></a></h2>
+</section>
+</section>
+
+
+  </article>
+
+  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Maks Debek, Michal Gierczuk&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 7.0.1</a></div>
+  </footer></main>
+
+
+    <button
+  data-search-target="snackbar"
+  data-action="search#hideSnackbar"
+  class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full"
+>
+  Clear highlights
+</button><div
+  data-sidebar-target="screen"
+  data-action="click->sidebar#close"
+  class="fixed hidden inset-0 bg-black bg-opacity-50">
+</div>
+  </div>
+  
+  
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+<script src="_static/doctools.js"></script>
+<script src="_static/sphinx_highlight.js"></script>
+<script src="_static/translations.js"></script>
+<script src="_static/theme.c8991bd7bb6e57cbeea8.js"></script>
+  
+</body>
+
+</html>

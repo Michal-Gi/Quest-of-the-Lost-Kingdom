@@ -7,6 +7,57 @@ from os import path
 
 
 class Player(Character, pygame.sprite.Sprite):
+    """
+        Klasa Player służy do reprezentowania gracza w grze. Jest to postać sterowana przez gracza, która ma określone atrybuty
+        i wykonuje określone działania, takie jak poruszanie się, atakowanie i zbieranie przedmiotów.
+
+        Atrybuty:
+            hp (int): Obecne punkty życia gracza.
+            mp (int): Obecne punkty magii gracza.
+            stamina (int): Obecna wytrzymałość gracza.
+            damage (int): Obecne obrażenia zadawane przez gracza.
+            speed (float): Szybkość poruszania się gracza.
+            animation_speed (int): Szybkość animacji gracza.
+            scale (int): Skala sprite'a gracza.
+            obstacles (pygame.sprite.Group): Grupa sprite'ów reprezentujących przeszkody.
+            enemies (pygame.sprite.Group): Grupa sprite'ów reprezentujących wrogów.
+            avatar (str): Ścieżka do pliku z avatarem gracza.
+            maxhp (int): Maksymalna liczba punktów życia gracza.
+            coininventory (list): Lista zebranych przez gracza monet.
+            potioninventory (list): Lista zebranych przez gracza mikstur.
+            fontpath (str): Ścieżka do pliku z czcionką.
+
+        Metody:
+            __init__(self, pos, groups, speed, animation_speed, scale, obstacles, enemies, hp, mp, stamina, damage, avatar):
+                Inicjalizuje obiekt Player na podstawie podanych atrybutów i dodaje go do odpowiednich grup sprite'ów.
+
+            load(self, path, scale):
+                Ładuje sprite'a gracza z pliku i skaluje go do odpowiedniego rozmiaru.
+
+            input(self):
+                Przetwarza wejście od gracza i odpowiednio aktualizuje stan gracza.
+
+            collision(self):
+                Sprawdza kolizje gracza z innymi sprite'ami i odpowiednio aktualizuje stan gracza.
+
+            draw_hp_bar(self, surface, x, y):
+                Rysuje pasek życia gracza na podanej powierzchni w określonym miejscu.
+
+            draw_coininventory(self, surface, x, y):
+                Rysuje liczbę zebranych przez gracza monet na podanej powierzchni w określonym miejscu.
+
+            draw_potioninventory(self, surface, x, y):
+                Rysuje liczbę zebranych przez gracza mikstur na podanej powierzchni w określonym miejscu.
+
+            move(self, speed):
+                Porusza graczem z odpowiednią szybkością.
+
+            update(self):
+                Aktualizuje stan gracza na podstawie wejścia od gracza i zdarzeń w grze.
+
+            cooldowns(self, action):
+                Obsługuje czas odnowienia dla akcji gracza.
+        """
     def __init__(self, pos, groups, speed, animation_speed, scale, obstacles, enemies, hp, mp, stamina, damage, avatar):
         Character.__init__(self, hp=hp, mp=mp, stamina=stamina, damage=damage)
         pygame.sprite.Sprite.__init__(self, groups)
@@ -137,7 +188,7 @@ class Player(Character, pygame.sprite.Sprite):
                 print(sprite.hp)
 
 
-    
+
     def draw_hp_bar(self, surface, x, y):
         if self.hp < 0:
             self.hp = 0
