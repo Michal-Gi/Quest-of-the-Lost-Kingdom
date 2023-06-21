@@ -5,6 +5,8 @@ from basicenemy import BasicEnemy
 import sys
 from item import item
 from pytmx.util_pygame import load_pygame
+from ImageSelector import ImageSelector
+from tkinter import Tk
 
 
 pygame.init()
@@ -19,17 +21,10 @@ item_sprite_group = pygame.sprite.Group()
 pygame.mixer.init()
 pygame.mixer.music.load("../Assets/music/Casual game track.mp3")
 
-chosen = False
-while not chosen:
-    avatar = input('Wybierz postać.\nPostacie do wyboru: guy, robe\n')
-    if avatar == 'guy' or avatar == 'robe':
-        chosen = True
-        if avatar == 'guy':
-            avatar = ''
-        else:
-            avatar = 'r'
-    else:
-        print('nie rozpoznano postaci')
+root = Tk()
+selector = ImageSelector(root)
+root.mainloop()
+avatar = selector.avatar
 
 running = True
 gracz = Player(pos=(400,300), groups=character_sprite_group, speed=2.5, animation_speed=0.5, scale=0.75, obstacles=object_group, enemies=enemy_sprite_group, hp=100, mp=10, stamina=10, damage=30, avatar=avatar)
@@ -47,6 +42,7 @@ item6 = item(groups=item_sprite_group, name='potion')
 
 
 pygame.mixer.music.play(-1)
+pygame.mixer.music.set_volume(0.25)
 while running:
     # poll for events
     # pygame.QUIT event means the user clicked X to close your window

@@ -137,6 +137,7 @@ class Player(Character, pygame.sprite.Sprite):
                 print(sprite.hp)
 
 
+    
     def draw_hp_bar(self, surface, x, y):
         if self.hp < 0:
             self.hp = 0
